@@ -56,7 +56,8 @@
   </body>
   <script>
   // Create a Stripe client.
-var stripe = Stripe('pk_test_jcRqOInepmyrtSkisdcGo3t600tJdcYG4n');
+var stripe_public_key = process.env.StripePublicKey;
+var stripe = Stripe(stripe_public_key);
 
 // Create an instance of Elements.
 var elements = stripe.elements();

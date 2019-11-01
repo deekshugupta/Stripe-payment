@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const stripe = require('stripe')('sk_test_d98FbbU2Tnwp8vdGReDRcsRk005ZSN3B0S');
+var stripe_secret_key = process.env.StripeSecretKey;
+const stripe = require('stripe')(stripe_secret_key);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
